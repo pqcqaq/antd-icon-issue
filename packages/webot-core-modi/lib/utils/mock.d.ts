@@ -1,0 +1,15 @@
+import { BlockProps, PropsData } from "../types/Block";
+import { ImageFit, PropsBlock, PropsElement, PropsMenu, WbBackground, WbButton, WbElement, WbIcon, WbImage, WbMenu, WbText } from "../types/Element";
+export declare function genId(): string;
+export declare function getHeight(width: number, ratio: number): number;
+export declare function caclRatio(width: number, height: number): number;
+export declare function generateMockImageUrl(width: number, height: number): string;
+export declare function generateMockText(maxl: number, c: WbText["case"]): string;
+export declare function generateButtonProps(size: WbButton["size"], c: WbButton["case"]): PropsElement<WbButton>;
+export declare function generateTextProps(_maxLength: number, minLength: number, c: WbText["case"]): PropsElement<WbText>;
+export declare function generateImageProps(minRatio: number, maxRatio: number, minWidth: number, maxWidth: number): PropsElement<WbImage>;
+export declare function generateMenuProps(level: WbMenu["level"], maxTextLength: number, maxTitleLength: number): PropsMenu;
+export declare function generateIconProps(name: WbIcon["name"], maxTextLength: WbIcon["maxTextLength"]): PropsElement<WbIcon>;
+export declare function generateBackgroundProps(minRatio: number, minWidth: number, color?: string, fit?: ImageFit): PropsElement<WbBackground>;
+export declare function generateDefaultData<WE extends WbElement[]>(elements: WE): PropsBlock<WE>;
+export declare function generateDefaultProps<P extends BlockProps>(props: P): PropsData<P>;
